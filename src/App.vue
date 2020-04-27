@@ -11,7 +11,7 @@
         <li><strong>Height:</strong> {{ pokemon.height | inchToFeet }}</li>
         <li><strong>Weight:</strong> {{ pokemon.weight }}</li>
       </ul>
-      <h3> v-if="pokemon.types.length = 1">Type:</h3>
+      <h3 v-if="pokemon.types.length <= 1">Type:</h3>
       <h3> v-else>Types:</h3>
       <ul class="poketype">
         <li v-for="type in pokemon.types" v-bind:class="type" :key="type"> {{ type }}</li>
